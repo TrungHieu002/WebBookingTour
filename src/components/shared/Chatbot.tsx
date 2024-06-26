@@ -18,7 +18,7 @@ const Chatbot = () => {
                     setMessages(prevMessages => [...prevMessages, { text: aiResponse, fromUser: false }]);
                 }
                 else {
-                    const aiResponse = `http://localhost:5173/tour/${res.ids[0]}`;
+                    const aiResponse = `https://web-booking-tour.vercel.app/tour/${res.ids[0]}`;
                     setMessages(prevMessages => [...prevMessages, { text: aiResponse, fromUser: false }]);
                 }
             })

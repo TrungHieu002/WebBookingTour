@@ -5,7 +5,7 @@ export const GetTokenUser = async (tokenGoogle: string) => {
     const formData = new FormData();
     formData.append("tokenGoogle", tokenGoogle);
     const response = await axios.post(
-      `${import.meta.env.VITE_BACKEND}/api/identity/token`,
+      `https://webbookingtourapi.azurewebsites.net/api/identity/token`,
       formData,
       {
         headers: {
@@ -58,7 +58,7 @@ export const SignUpAPI = async (formData: InfoAccountType) => {
   });
   try {
     const response = await axios.post(
-      `${import.meta.env.VITE_BACKEND}/api/v1/user`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/user`,
       formTourOrder,
       {
         headers: {

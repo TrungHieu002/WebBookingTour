@@ -5,7 +5,7 @@ export const UploadImage = async (file: File) => {
   formDataFile.append("file", file);
   try {
     const response = await axiosClient.post(
-      `${import.meta.env.VITE_BACKEND}/api/v1/upload/cloudinary`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/upload/cloudinary`,
       formDataFile,
       {
         headers: {

@@ -7,9 +7,7 @@ export const GetAllBookingCustomer = async (
   endDate?: string
 ) => {
   try {
-    let url = `${
-      import.meta.env.VITE_BACKEND
-    }/api/v1/order/customer?currentPage=${current}`;
+    let url = `https://webbookingtourapi.azurewebsites.net/api/v1/order/customer?currentPage=${current}`;
     if (Keyword) {
       url += `&Keyword=${Keyword}`;
     }
@@ -31,7 +29,7 @@ export const GetAllBookingCustomer = async (
 };
 export const GetBookingById = async (id: string) => {
   try {
-    const url = `${import.meta.env.VITE_BACKEND}/api/v1/order/${id}`;
+    const url = `https://webbookingtourapi.azurewebsites.net/api/v1/order/${id}`;
     const response = await axiosClient.get(url);
     if (!response.data) {
       throw new Error("Booking not found in response data");

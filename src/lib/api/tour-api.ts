@@ -85,7 +85,7 @@ export const AddTour = async (formData: TourData) => {
   }
   try {
     const response = await axiosClient.post(
-      `${import.meta.env.VITE_BACKEND}/api/v1/tour`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/tour`,
       formDataTour,
       {
         headers: {
@@ -109,9 +109,7 @@ export const GetAllTourByTourOwner = async (
   endDate?: string
 ) => {
   try {
-    let url = `${
-      import.meta.env.VITE_BACKEND
-    }/api/v1/tour/tour-owner/?currentPage=${current}`;
+    let url = `https://webbookingtourapi.azurewebsites.net/api/v1/tour/tour-owner/?currentPage=${current}`;
     if (Keyword) {
       url += `&Keyword=${Keyword}`;
     }
@@ -134,9 +132,7 @@ export const GetAllTourByTourOwner = async (
 
 export const GetTourHome = async (OrderBy: boolean = false) => {
   try {
-    let url = `${
-      import.meta.env.VITE_BACKEND
-    }/api/v1/tour?pageSize=4&isExport=false`;
+    let url = `https://webbookingtourapi.azurewebsites.net/api/v1/tour?pageSize=4&isExport=false`;
     if (OrderBy) {
       url += `&OrderBy=Price`;
     }
@@ -152,7 +148,7 @@ export const GetTourHome = async (OrderBy: boolean = false) => {
 };
 export const GetTourById = async (id: string) => {
   try {
-    const url = `${import.meta.env.VITE_BACKEND}/api/v1/tour/${id}`;
+    const url = `https://webbookingtourapi.azurewebsites.net/api/v1/tour/${id}`;
     const response = await axios.get(url);
     if (!response.data) {
       throw new Error("Tour not found in response data");
@@ -171,7 +167,7 @@ export const AddTourOder = async (formData: TourOder) => {
   });
   try {
     const response = await axiosClient.post(
-      `${import.meta.env.VITE_BACKEND}/api/v1/order`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/order`,
       formTourOrder,
       {
         headers: {
@@ -196,9 +192,7 @@ export const GetAllByAll = async (
   endDate?: string
 ) => {
   try {
-    let url = `${
-      import.meta.env.VITE_BACKEND
-    }/api/v1/tour/?currentPage=${current}`;
+    let url = `https://webbookingtourapi.azurewebsites.net/api/v1/tour/?currentPage=${current}`;
     if (Keyword) {
       url += `&Keyword=${Keyword}`;
     }
@@ -256,7 +250,7 @@ export const EditTour = async (formData: TourUpdateData) => {
   }
   try {
     const response = await axiosClient.put(
-      `${import.meta.env.VITE_BACKEND}/api/v1/tour`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/tour`,
       formDataTour,
       {
         headers: {
@@ -275,9 +269,7 @@ export const EditTour = async (formData: TourUpdateData) => {
 };
 export const GetListOrderByTour = async (id: string) => {
   try {
-    const url = `${
-      import.meta.env.VITE_BACKEND
-    }/api/v1/order/tour?tourId=${id}`;
+    const url = `https://webbookingtourapi.azurewebsites.net/api/v1/order/tour?tourId=${id}`;
     const response = await axiosClient.get(url);
     if (!response.data) {
       throw new Error("List Order not found in response data");

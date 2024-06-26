@@ -12,7 +12,7 @@ export const RedirectVNPay = async (prices: number) => {
   const tmnCode = "0KDRSS4Q";
   const secretKey = "MKVLD3ARPJCLWNP9503YWKM6XWKBHW6T";
   let vnpUrl = " https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-  const returnUrl = "http://localhost:5173/Home";
+  const returnUrl = "https://web-booking-tour.vercel.app/Home";
 
   const createDate = parseInt(date.format("YYYYMMDDHHmmss")); //Là thời gian phát sinh giao dịch định dạng yyyyMMddHHmmss
   const orderId = date.format("YYYYMMDDHHmmss") + 123; //Mã tham chiếu của giao dịch tại hệ thống của merchant. Mã này là duy nhất dùng để phân biệt các đơn hàng gửi sang VNPAY. Không được trùng lặp trong ngày.

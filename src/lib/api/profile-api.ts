@@ -4,7 +4,7 @@ import { axiosClient } from "./config/axios-client";
 export const GetProfile = async () => {
   try {
     const response = await axiosClient.get(
-      `${import.meta.env.VITE_BACKEND}/api/v1/user/profile`
+      `https://webbookingtourapi.azurewebsites.net/api/v1/user/profile`
     );
     if (!response.data) {
       throw new Error("Profile not found in response data");
@@ -24,7 +24,7 @@ export const EditProfile = async (formData: UserData) => {
   console.log("api edit", formDataProfile);
   try {
     const response = await axiosClient.put(
-      `${import.meta.env.VITE_BACKEND}/api/v1/user/profile`,
+      `https://webbookingtourapi.azurewebsites.net/api/v1/user/profile`,
       formDataProfile,
       {
         headers: {
