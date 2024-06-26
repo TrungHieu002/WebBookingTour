@@ -1,0 +1,60 @@
+@use "@/styles/abstracts" as *;
+
+.statisticAdmin__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0px;
+
+    .search__form {
+        .statistic__admin {
+            margin: 0px 10%;
+            gap: 8px;
+            flex-wrap: nowrap;
+            padding: 16px;
+        }
+
+        .statistic__item {
+            flex-shrink: 1;
+        }
+    }
+
+    .search__form-admin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 24px;
+        gap: 16px;
+    }
+
+    .data__statistic {
+        max-width: 1900px;
+        margin: 0px 10%;
+    }
+}
+
+.user__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-avt {
+        padding: 16px 0;
+    }
+
+    &-name {
+        @include txtCustom(20px, 600, #383838);
+        line-height: 24px;
+    }
+
+    &-role {
+        padding: 8px 0px 24px 0px;
+        @include txtCustom(16px, 600, #495560);
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+}

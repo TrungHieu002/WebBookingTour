@@ -1,0 +1,12 @@
+@use "@/styles/abstracts" as *;
+
+
+.statisticAdmin__container {
+    .search__form-admin .ant-select-selector {
+        border-color: #79747e;
+    }
+
+    .search__form-admin .ant-select-selector:hover {
+        border-color: #79747e;
+    }
+}

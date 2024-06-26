@@ -1,0 +1,80 @@
+@use "@/styles/abstracts" as *;
+
+.header_app {
+  background: #ffffff;
+  box-shadow: 0px 4px 16px 0px #1122110d;
+  height: $heighHeader;
+  display: flex;
+  top: 0;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+
+  .header__nav-list {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    gap: 24px;
+
+    li {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    .active {
+      @include txtCustom(16px, 500, #01b7f2);
+      text-decoration: none;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      border-bottom: 3px solid #01b7f2;
+    }
+  }
+
+  .header__nav-item {
+    @include txtCustom(16px, 500, #112211);
+    text-decoration: none;
+    border-bottom: 3px solid #ffffff;
+
+    &:hover {
+      color: #01b7f2;
+    }
+  }
+
+  .header__login {
+    display: flex;
+    gap: 12px;
+    border-bottom: 3px solid #ffffff;
+    align-items: center;
+    @include txtCustom(16px, 500, #112211);
+
+    &-separator {
+      border-right: 1px solid #112211;
+      height: 17px;
+    }
+
+    &-signin {
+      text-decoration: none;
+      color: #112211;
+
+      &:hover {
+        color: #01b7f2;
+        cursor: pointer;
+      }
+    }
+
+    &-signup {
+      text-decoration: none;
+      color: #112211;
+
+      &:hover {
+        color: #01b7f2;
+        cursor: pointer;
+      }
+    }
+  }
+}

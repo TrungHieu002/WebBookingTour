@@ -1,0 +1,17 @@
+@use "@/styles/abstracts" as *;
+
+.containerFooter {
+  .footer__img {
+    background-color: #2d3e52;
+    width: 100%;
+  }
+  .footer__title {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ffffff1a;
+    background-color: #2d3e52;
+    @include txtCustom(14px, 400, #ffffff);
+  }
+}

@@ -1,0 +1,7 @@
+$heighHeader: 85px;
+@mixin txtCustom($size, $weight, $color) {
+  font-family: "Segoe UI";
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

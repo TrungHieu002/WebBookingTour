@@ -1,0 +1,49 @@
+@use "sass:math";
+.container {
+  max-width: 1900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@function grid-class-name-generic($device) {
+  @if $device == "all" {
+    @return "";
+  }
+  @return "-" + $device;
+}
+
+@function grid-class-name($device, $size) {
+  @if $device == "all" {
+    @return "" + $size;
+  }
+  @return "-" + $device + "-" + $size;
+}
+@mixin grid-system($device) {
+  .col#{grid-class-name-generic($device)} {
+    flex: 1;
+  }
+  @for $size from 1 through 12 {
+    .col#{grid-class-name($device, $size)} {
+      width: math.div($size, 12) * 100%;
+    }
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include grid-system("all");
+}
+//tablets
+@media (min-width: 768px) {
+  .row {
+    @include grid-system("tablet");
+  }
+}
+//desktop
+@media (min-width: 1200px) {
+  .row {
+    @include grid-system("desktop");
+  }
+}

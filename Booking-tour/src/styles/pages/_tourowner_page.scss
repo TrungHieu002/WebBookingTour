@@ -1,0 +1,47 @@
+@use "@/styles/abstracts" as *;
+
+.tourOwner__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 0px;
+
+    .searchTour__form {
+        .statistic__owner {
+            margin: 0px 10%;
+            gap: 8px;
+            flex-wrap: nowrap;
+            padding: 16px;
+        }
+
+        .statistic__item {
+            flex-shrink: 1;
+        }
+    }
+
+    .search__form-owner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 24px;
+        gap: 16px;
+    }
+
+    .data__tour {
+        max-width: 1900px;
+        margin: 0px 10%;
+    }
+
+    .search__form-owner .ant-select-selector {
+        border-color: #79747e;
+    }
+
+    .search__form-owner .ant-select-selector:hover {
+        border-color: #79747e;
+    }
+
+    .action__table {
+        display: flex;
+        gap: 24px;
+    }
+}

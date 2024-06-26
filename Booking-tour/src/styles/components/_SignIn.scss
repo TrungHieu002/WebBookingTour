@@ -1,0 +1,27 @@
+@use "@/styles/abstracts" as *;
+.loginPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loginBox {
+    max-width: 1000px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.16);
+    &__btnLogin {
+      display: flex;
+      justify-content: center;
+    }
+    .login__title {
+      @include txtCustom(32px, 500, #32475cde);
+      padding-bottom: 24px;
+      line-height: 32px;
+    }
+  }
+}

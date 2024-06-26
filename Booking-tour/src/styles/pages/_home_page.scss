@@ -1,0 +1,107 @@
+@use "@/styles/abstracts" as *;
+
+.Panel {
+  object-fit: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 16px;
+  .Panel__img {
+    width: 100%;
+    object-fit: cover;
+    height: 452px;
+  }
+  .search {
+    position: absolute;
+    box-shadow: 0px 4px 14px 0px #0000001a;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    left: 50%;
+    bottom: 20%;
+    z-index: 1;
+    transform: translateX(-50%);
+    &__form {
+      display: flex;
+      gap: 16px;
+    }
+    &__title {
+      text-align: center;
+      @include txtCustom(20px, bold, #112211);
+      line-height: 30px;
+      padding-bottom: 25px;
+    }
+    .select__form .ant-select-selector {
+      border-color: #79747e;
+    }
+    .select__form .ant-select-selector:hover {
+      border-color: #79747e;
+    }
+  }
+}
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  .listCard {
+    &__title {
+      @include txtCustom(24px, bold, #172432);
+      line-height: 52.5px;
+    }
+    &__item {
+      height: 260px;
+      width: 100%;
+      object-fit: cover;
+      &-activity {
+        @include txtCustom(16px, 500, #000000);
+        line-height: 24px;
+      }
+      &-info {
+        @include txtCustom(13px, 400, #000000);
+        line-height: 19.5px;
+      }
+      &-content {
+        @include txtCustom(14px, 500, #000000);
+        line-height: 21px;
+      }
+    }
+    &__location {
+      position: absolute;
+      @include txtCustom(24px, 500, #ffffff);
+      line-height: 24px;
+      bottom: 20px;
+      left: 30px;
+    }
+    &__link {
+      position: relative;
+    }
+    &__weather {
+      .weather__text-primary {
+        @include txtCustom(16px, 400, #ffffff);
+        line-height: 16px;
+      }
+      .weather__text-secondary {
+        @include txtCustom(14px, 400, #778088);
+        line-height: 16px;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #2d3e52;
+      border-radius: 16px;
+      &-item {
+        padding: 16px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+}

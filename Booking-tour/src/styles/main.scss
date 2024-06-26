@@ -1,0 +1,24 @@
+@use "abstracts";
+@use "base";
+@use "pages";
+@use "components";
+@use "@/styles/abstracts" as *;
+
+.margin-header {
+  margin-top: $heighHeader + 3px;
+}
+
+.fix-height {
+  flex: 1;
+}
+
+.container__body {
+  display: flex;
+  flex-direction: column;
+  padding-top: $heighHeader + 3px;
+  min-height: 100vh;
+}
+
+.ant-popover {
+  width: 500px;
+}
